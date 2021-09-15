@@ -1,0 +1,59 @@
+$colorPrincipal: rgba(154, 15, 168, 1);
+$colorSecundario: rgba(54, 22, 157, 1);
+
+$estiloColores: (
+  violeta: $colorPrincipal,
+  azul: $colorSecundario,
+);
+
+footer {
+  background: rgb(54, 22, 157);
+  background: linear-gradient(
+    180deg,
+    rgba(54, 22, 157, 1) 0%,
+    rgba(9, 56, 121, 1) 13%,
+    rgba(154, 15, 168, 1) 100%
+  );
+  a {
+    color: white;
+  }
+}
+
+.bg-primary {
+  background-color: map-get($estiloColores, violeta) !important;
+}
+
+.navbar-light {
+  .navbar-nav {
+    .nav-link {
+      color: white;
+    }
+  }
+}
+
+.divOpiniones {
+  background-color: map-get($estiloColores, azul);
+  border-radius: 2px;
+  color: white;
+}
+
+.switch {
+  background-color: rgb(67, 12, 85);
+  color: white;
+}
+
+body {
+  transition: 0.3s ease all;
+  &.dark {
+    background-color: #111111;
+    color: #ffffff;
+    .card {
+      background-color: #222222;
+    }
+    .formularioContacto {
+      p {
+        background-color: #222222;
+      }
+    }
+  }
+}
